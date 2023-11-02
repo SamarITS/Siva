@@ -66,7 +66,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @SAM_DUB_LEZHa</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @SivaSoft_HUB</b>")
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
@@ -76,8 +76,8 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>𝐇𝐞𝐲 {user} 😍 ,\n\n𝐘𝐨𝐮 𝐂𝐚𝐧'𝐭 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞𝐬 𝐅𝐫𝐨𝐦 𝐇𝐞𝐫𝐞. 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐢𝐭 𝐈𝐧 𝐎𝐮𝐫 <a href='https://t.me/SAM_DUB_LEEZZA'>𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩</a> 𝐎𝐫 𝐂𝐥𝐢𝐜𝐤 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐇𝐞𝐫𝐞 𝐁𝐮𝐭𝐭𝐨𝐧 𝐁𝐞𝐥𝐨𝐰 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐇𝐞𝐫𝐞 ", url=f"telegram.me/SAM_DUB_LEEZZa")]])
+         text=f"<b>𝐇𝐞𝐲 {user} 😍 ,\n\n𝐘𝐨𝐮 𝐂𝐚𝐧'𝐭 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞𝐬 𝐅𝐫𝐨𝐦 𝐇𝐞𝐫𝐞. 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐢𝐭 𝐈𝐧 𝐎𝐮𝐫 <a href='https://t.me/sivasoft_req'>𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩</a> 𝐎𝐫 𝐂𝐥𝐢𝐜𝐤 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐇𝐞𝐫𝐞 𝐁𝐮𝐭𝐭𝐨𝐧 𝐁𝐞𝐥𝐨𝐰 👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐇𝐞𝐫𝐞 ", url=f"https://t.me/sivasoft_req")]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
@@ -1171,7 +1171,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url=link.invite_link),
                  InlineKeyboardButton("𝐕𝐢𝐞𝐰 𝐒𝐭𝐚𝐭𝐮𝐬", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("❄ 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🥀", url="t.me/SAM_DUB_LEZHa")
+                 InlineKeyboardButton("❄ 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🥀", url="t.me/SivaSoft_HUB")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1196,7 +1196,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url=link.invite_link),
                  InlineKeyboardButton("𝐕𝐢𝐞𝐰 𝐒𝐭𝐚𝐭𝐮𝐬", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("❄ 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🥀", url="https://t.me/SAM_DUB_LEEZZA")
+                 InlineKeyboardButton("❄ 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🥀", url="https://t.me/sivasoft_req")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1249,13 +1249,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('🍁𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐔 𝐑 𝐆𝐫𝐨𝐮𝐩🍁', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('☘️ 𝐌𝐚𝐢𝐧 𝐇𝐮𝐛 🦞', url='t.me/SAM_DUB_LEZHa'),
-                    InlineKeyboardButton('❄ 𝐑𝐞𝐪 𝐆𝐫𝐨𝐮𝐩 🥀', url='https://t.me/SAM_DUB_LEEZZA')
+                    InlineKeyboardButton('☘️ 𝐌𝐚𝐢𝐧 𝐇𝐮𝐛 🦞', url='https://t.me/SivaSoft_HUB'),
+                    InlineKeyboardButton('❄ 𝐑𝐞𝐪 𝐆𝐫𝐨𝐮𝐩 🥀', url='https://t.me/sivasoft_req')
                 ],[
                     InlineKeyboardButton('🌿𝐇𝐞𝐥𝐩🎧', callback_data='help'),
                     InlineKeyboardButton('♣𝐀𝐛𝐨𝐮𝐭🥀', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🏞 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎇', url='t.me/SAM_DUB_LEZHa')
+                    InlineKeyboardButton('🏞 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🎇', url='https://t.me/SivaSoft_Update')
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1333,7 +1333,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🥀', url='https://t.me/SAM_DUB_LEEZZA'),
+            InlineKeyboardButton('❄ 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐆𝐫𝐨𝐮𝐩 🥀', url='https://t.me/sivasoft_req'),
             InlineKeyboardButton('☠️ 𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞 ☠️', callback_data='source')
         ],[
             InlineKeyboardButton('♠𝐇𝐨𝐦𝐞 𝐏𝐚𝐠𝐞🌿', callback_data='start'),
@@ -1352,7 +1352,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='about')
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1367,7 +1367,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "manuelfilter":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='filters'),
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='filters'),
             InlineKeyboardButton('🔒𝐁𝐮𝐭𝐭𝐨𝐧𝐬🔓', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1383,7 +1383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "button":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='manuelfilter')
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='manuelfilter')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1398,7 +1398,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "autofilter":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='filters')
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='filters')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1413,7 +1413,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "coct":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='help')
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1428,7 +1428,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "extra":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='help'),
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='help'),
             InlineKeyboardButton('☔𝐀𝐝𝐦𝐢𝐧🌎', callback_data='help')
         ]]
         await client.edit_message_media(
@@ -1445,7 +1445,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "store_file":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='help')
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='help')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1461,7 +1461,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝 ❄', callback_data='extra')
+            InlineKeyboardButton('❄ 𝐁𝐚𝐜𝐤 ❄', callback_data='extra')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -1476,7 +1476,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('❄𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝❄', callback_data='help'),
+            InlineKeyboardButton('❄𝐁𝐚𝐜𝐤❄', callback_data='help'),
             InlineKeyboardButton('♻️𝐑𝐞𝐟𝐫𝐞𝐬𝐡♻️', callback_data='rfrsh')
         ]]
         await client.edit_message_media(
@@ -1500,7 +1500,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rfrsh":
         await query.answer("Fetching MongoDb DataBase")
         buttons = [[
-            InlineKeyboardButton('❄𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝❄', callback_data='help'),
+            InlineKeyboardButton('❄𝐁𝐚𝐜𝐤❄', callback_data='help'),
             InlineKeyboardButton('♻️𝐑𝐞𝐟𝐫𝐞𝐬𝐡♻️', callback_data='rfrsh')
         ]]
         await client.edit_message_media(
@@ -1523,7 +1523,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "shortlink_info":
             btn = [[
-                    InlineKeyboardButton("❄𝐁𝐚𝐜𝐤𝐰𝐚𝐫𝐝❄", callback_data="start"),
+                    InlineKeyboardButton("❄𝐁𝐚𝐜𝐤❄", callback_data="start"),
                     InlineKeyboardButton("♻️𝐑𝐞𝐟𝐫𝐞𝐬𝐡♻️", callback_data="rfrsh")
                   ]]
             await client.edit_message_media(
@@ -1633,7 +1633,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_text(f"<b><b>♻️ 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 ♻️'{search}' 🧐🤹‍♂️🎬</b></b>")
+            m=await message.reply_text(f"<b><b>♻️ 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 ♻️'{search}' </b></b>")
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -1662,7 +1662,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_text(f"♻️ 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 ♻️'{search}' 🧐🤹‍♂️🎬</b></b>")
+        m=await message.reply_text(f"♻️ 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 ♻️'{search}' </b></b>")
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     pre = 'filep' if settings['file_secure'] else 'file'
